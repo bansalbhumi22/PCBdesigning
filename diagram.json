@@ -1,0 +1,143 @@
+{
+  "version": 1,
+  "author": "SmartQueueSystem",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": -172.2, "left": 258.6, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo1", "top": 430, "left": -316.8, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo2", "top": 113.2, "left": -192, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo3", "top": 430, "left": -38.4, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo4", "top": 113.2, "left": 96, "attrs": {} },
+    {
+      "type": "wokwi-button",
+      "id": "button1",
+      "top": 350,
+      "left": 330,
+      "attrs": { "color": "green", "label": "+1" }
+    },
+    {
+      "type": "wokwi-7segment",
+      "id": "seg",
+      "top": 63.42,
+      "left": 605.92,
+      "attrs": { "digits": "3", "colon": "", "common": "cathode" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": -157,
+      "left": 787.2,
+      "attrs": { "color": "green", "xray": "1" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn2",
+      "top": -166.6,
+      "left": 96,
+      "attrs": { "color": "green", "xray": "1" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text1",
+      "top": 278.4,
+      "left": -355.2,
+      "rotate": 270,
+      "attrs": { "text": "_________________________________" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text2",
+      "top": 288,
+      "left": -76.8,
+      "rotate": 270,
+      "attrs": { "text": "_________________________________" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text3",
+      "top": 278.4,
+      "left": -230.4,
+      "rotate": 270,
+      "attrs": { "text": "_________________________________" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text4",
+      "top": 288,
+      "left": 57.6,
+      "rotate": 270,
+      "attrs": { "text": "_________________________________" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text5",
+      "top": 76.8,
+      "left": -336,
+      "attrs": { "text": "___________________________________________________________________________" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text7",
+      "top": 489.6,
+      "left": -441.6,
+      "attrs": {
+        "text": "________________________________________________________________________________________________________________"
+      }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text6",
+      "top": 249.6,
+      "left": -518.4,
+      "rotate": 270,
+      "attrs": { "text": "________________________________________________" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text8",
+      "top": 412.8,
+      "left": -451.2,
+      "attrs": { "text": "_______________\n" }
+    }
+  ],
+  "connections": [
+    [ "servo1:GND", "uno:GND", "black", [] ],
+    [ "servo1:V+", "uno:5V", "red", [] ],
+    [ "servo1:PWM", "uno:5", "gray", [] ],
+    [ "servo2:GND", "uno:GND", "black", [] ],
+    [ "servo2:V+", "uno:5V", "red", [] ],
+    [ "servo2:PWM", "uno:6", "gray", [] ],
+    [ "servo3:GND", "uno:GND", "black", [] ],
+    [ "servo3:V+", "uno:5V", "red", [] ],
+    [ "servo3:PWM", "uno:9", "gray", [] ],
+    [ "servo4:GND", "uno:GND", "black", [] ],
+    [ "servo4:V+", "uno:5V", "red", [] ],
+    [ "servo4:PWM", "uno:A2", "gray", [] ],
+    [ "button1:1", "uno:A3", "blue", [] ],
+    [ "button1:2", "uno:GND", "black", [] ],
+    [ "seg:CA1", "uno:12", "green", [] ],
+    [ "seg:CA2", "uno:13", "green", [] ],
+    [ "seg:CA3", "uno:A0", "green", [] ],
+    [ "seg:CA4", "uno:A1", "green", [] ],
+    [ "seg:A", "uno:2", "orange", [ "v-19.2", "h-186.5" ] ],
+    [ "seg:B", "uno:3", "orange", [ "v-57.6", "h-234.4" ] ],
+    [ "seg:C", "uno:4", "orange", [ "v47.16", "h-224.7" ] ],
+    [ "seg:D", "uno:7", "orange", [ "v37.56", "h-234" ] ],
+    [ "seg:F", "uno:10", "orange", [ "v-38.4", "h-279.1" ] ],
+    [ "seg:G", "uno:11", "orange", [ "v56.76", "h-307.8" ] ],
+    [ "servo1:GND", "uno:GND.1", "black", [ "h0" ] ],
+    [ "servo2:GND", "uno:GND.1", "black", [ "h0" ] ],
+    [ "servo3:GND", "uno:GND.1", "black", [ "h0" ] ],
+    [ "servo4:GND", "uno:GND.1", "black", [ "h0" ] ],
+    [ "seg:DIG4", "uno:A0", "green", [ "v0" ] ],
+    [ "seg:DIG2", "uno:13", "green", [ "v0" ] ],
+    [ "seg:E", "uno:8", "orange", [ "h-77.08", "v-298.44" ] ],
+    [ "seg:DIG3", "uno:A0", "green", [ "v0" ] ],
+    [ "seg:DIG1", "uno:12", "green", [ "v0" ] ],
+    [ "btn2:2.r", "uno:A3", "green", [ "h0" ] ],
+    [ "btn1:2.l", "uno:A4", "green", [ "h0" ] ],
+    [ "btn1:1.r", "uno:GND.2", "green", [ "v0" ] ],
+    [ "btn2:1.l", "uno:GND.2", "green", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}
